@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.homeWrapper{
+
+}
+.recipeCardWrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 10px 0;
+}
