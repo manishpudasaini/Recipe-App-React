@@ -10,7 +10,15 @@
     height: auto;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    transition: transform 0.8s ease; 
 }
+
+.recipeCardWrapper:hover img{
+    cursor: pointer;
+    transform: scale(1.1);
+    border-radius: 9px;
+}
+
 .contentWrapper{
     padding: 10px;
     border-bottom-left-radius: 6px;

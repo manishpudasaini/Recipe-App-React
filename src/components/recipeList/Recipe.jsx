@@ -5,13 +5,13 @@ import {getAllRecipes,getAllReciesByCategory} from '../../apis/recipe'
 
 function Recipe() {
     const [categories,setCategories] = useState([])
-    const [selectedcategory,setSelectedCatgeory] = useState('beef')
+    const [selectedcategory,setSelectedCatgeory] = useState('chicken')
     const [meal,setMeals]=useState([])
 
   useEffect(()=>{
     getAllRecipesCategory()
     getMealsByCategory()
-  },[])
+  },[selectedcategory])
 
   const getAllRecipesCategory =()=>{
     getAllRecipes().then((res)=>{
@@ -24,15 +24,19 @@ function Recipe() {
       setMeals(res)
     })
   }
+ 
 
   return (
     <>
       <div className={styles.categoriesWrapper}>
           {categories?.length > 0 &&
             categories?.map((category) => (
-              <div className={styles.categoryItem} key={category.idCategory}>
-                {category?.strCategory}
-              </div>
+              <div key={category.idCategory}>
+                {/* Using onClick functio so we can choose the item and see the detail about items */}
+                <button className={styles.categoryItem} 
+                  onClick={()=>{setSelectedCatgeory(category.strCategory)}}>{category?.strCategory}</button> 
+              </div> 
+            
           ))}
       </div>
       
