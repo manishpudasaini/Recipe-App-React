@@ -3,11 +3,14 @@
     padding: 0;
 }
 .homeWrapper{
+    max-width: 700px;
+    margin: auto;
+    display: grid;
+    gap: 3rem;
     
 }
-.recipeCardWrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    margin: 10px 0;
-}
+/* .home-wrapper img:first-child {
+    width: 100%;
+    border-radius: 10px;
+  } */
+

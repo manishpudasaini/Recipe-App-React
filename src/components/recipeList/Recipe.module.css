@@ -1,0 +1,23 @@
+.categoriesWrapper{
+    max-width: 1000px;
+    display: flex;
+    gap:10px;
+    overflow: auto;
+    margin: auto;
+    padding:15px 0 ;
+  }
+  .categoryItem{
+    padding:5px;
+    border-radius: 5px;
+    border:1px solid var blue;
+    color:var(--main-color);
+    font-size: 13px;
+  }
+
+
+.recipeCardWrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 10px 0;
+}
