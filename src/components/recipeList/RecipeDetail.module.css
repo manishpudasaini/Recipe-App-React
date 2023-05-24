@@ -2,22 +2,38 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  .title {
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+}  
+.title {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .image {
+    margin-bottom: 20px;
+}
+ 
+.image {
     max-width: 100%;
     height: auto;
-    margin-bottom: 10px;
-  }
+    margin-bottom: 30px;
+}
   
-  .description {
+span{
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+.area{
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+  
+
+.description {
     font-size: 16px;
     line-height: 1.5;
-  }
+}
   
