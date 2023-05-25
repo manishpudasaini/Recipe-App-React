@@ -12,3 +12,26 @@ code {
 .homewrapper{
   display: none;
 }
+.w-6{
+  width: 25px;
+}
+.h-6{
+  width: 25px;
+}
+.icon-wrapper{
+  padding: 5px;
+  width: 20p;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon-wrapper svg{
+  width: 20px;
+  height: 20px;
+}
+.icon-wrapper:hover{
+  background-color: rgba(204, 204, 204, 0.144);
+}

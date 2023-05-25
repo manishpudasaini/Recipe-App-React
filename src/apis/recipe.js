@@ -35,3 +35,15 @@ export function getMealDetails(mealID){
         })
     })
 }
+
+//get meal by search name
+export function getMealBySearch(mealName){
+    return new Promise((resolve,reject)=>{
+        axios({
+            method:'get',
+            url: `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`
+        }).then((resp)=>{
+            resolve(resp?.data?.meals)
+        })
+    })
+}

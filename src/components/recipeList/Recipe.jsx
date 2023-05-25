@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Recipe.module.css'
 import Recipecard from '../../components/cards/Recipecard'
-import {getAllRecipes,getAllReciesByCategory} from '../../apis/recipe'
+import {getAllRecipes,getAllReciesByCategory,getMealBySearch} from '../../apis/recipe'
+import SearchField from '../../common/SearchField'
 
 function Recipe() {
     const [categories,setCategories] = useState([])
@@ -24,10 +25,19 @@ function Recipe() {
       setMeals(res)
     })
   }
+
+  const filterMealByName=(name)=>{
+    getMealBySearch(name).then((res) =>{
+      setMeals(res)
+    })
+  }
  
 
   return (
     <>
+      <SearchField onSearchInitiate={(searchItem)=>{
+        filterMealByName(searchItem);
+      }} />
       <div className={styles.categoriesWrapper}>
           {categories?.length > 0 &&
             categories?.map((category) => (

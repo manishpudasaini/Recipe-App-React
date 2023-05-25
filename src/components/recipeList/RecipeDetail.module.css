@@ -36,4 +36,17 @@ span{
     font-size: 16px;
     line-height: 1.5;
 }
+.description h2{
+    margin-top: 30px;
+}
+
+.ingredient{
+    font-size: 15px;
+    margin-top: 30px;
+
+}
+.ingredient span{
+    display: flex;
+    font-weight: 400;
+}
   
